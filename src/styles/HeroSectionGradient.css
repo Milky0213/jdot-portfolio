@@ -1,0 +1,39 @@
+/* styles/globals.css or components/AnimatedBackground.module.css */
+.background--custom {
+  background-color: #202020;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+canvas#canvas {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #5650BE 10%, #423D8B 70%, #232323 100%);
+  animation: waveAnimation 15s infinite alternate;
+  transform: scale(1.5) translateY(-10%);
+}
+
+@keyframes waveAnimation {
+  0% {
+    background: radial-gradient(circle at 30% 30%, #5650BE 10%, #423D8B 70%, #232323 100%);
+  }
+  25% {
+    background: radial-gradient(circle at 50% 50%, #423D8B 15%, #5650BE 60%, #272727 100%);
+  }
+  50% {
+    background: radial-gradient(circle at 70% 70%, #232323 20%, #5650BE 50%, #423D8B 90%);
+  }
+  75% {
+    background: radial-gradient(circle at 80% 20%, #423D8B 25%, #5650BE 40%, #232323 100%);
+  }
+  100% {
+    background: radial-gradient(circle at 30% 30%, #5650BE 10%, #423D8B 70%, #232323 100%);
+  }
+}
