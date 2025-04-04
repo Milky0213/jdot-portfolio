@@ -3,10 +3,9 @@ import HeroSectionGradient from '../components/HeroSectionGradient';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen overflow-hidden flex items-center justify-center">
-      {/* Animated Heatmap Background
-      <div className="absolute inset-0 animate-heatmap"></div> */}
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
       <HeroSectionGradient />
+      
       {/* Content */}
       <div className="relative text-center px-8">
         <h1 className="text-stone-100 text-6xl font-bold uppercase mb-4">
