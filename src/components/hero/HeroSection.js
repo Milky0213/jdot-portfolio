@@ -1,11 +1,14 @@
 import React from "react";
-import HeroSectionGradient from '../components/HeroSectionGradient';
+import { HeroSectionGradient } from '@/components/hero';
+import Button from "../ui/Button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center">
+      {/* Button */}
+
       <HeroSectionGradient />
-      
+
       {/* Content */}
       <div className="relative text-center px-8">
         <h1 className="text-stone-100 text-6xl font-bold uppercase mb-4">
@@ -17,10 +20,7 @@ const HeroSection = () => {
         <h1 className="text-stone-100 text-6xl font-bold uppercase mb-30">
           Your Business <span className="italic font-normal">Grow</span>
         </h1>
-
-        <button className="w-80 h-14 p-3 bg-white/0 rounded-xl outline outline-1 outline-offset-[-1px] outline-indigo-500 backdrop-blur-lg inline-flex justify-center items-center gap-5 overflow-hidden hover:bg-[#635BFF] transition-all duration-300 cursor-pointer">
-          Get Started
-        </button>
+        <Button title="Get Started" />
       </div>
     </section>
   );

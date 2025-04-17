@@ -1,7 +1,7 @@
 "use client"; 
 import { useEffect } from 'react';
-import { Gradient } from '../utils/gradient';
-import '../styles/HeroSectionGradient.css';
+import { Gradient } from '../../utils/gradient';
+import '../../styles/hero/heroSectionGradient.css';
 
 
 const HeroSectionGradient = () => {
