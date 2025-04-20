@@ -20,7 +20,7 @@ const HeroSection = () => {
         <h1 className="text-stone-100 text-6xl font-bold uppercase mb-30">
           Your Business <span className="italic font-normal">Grow</span>
         </h1>
-        <Button title="Get Started" />
+        <Button title="Get Started" textColor="text-white" />
       </div>
     </section>
   );
