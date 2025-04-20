@@ -145,7 +145,7 @@ const Services = () => {
                         <div className="left-[386.62px] top-[108.88px] absolute justify-start text-stone-100 text-6xl font-bold ">Aa</div>
                     </div>
                 </div>*/}
-                <div className="mb-5 h-28 border flex items-center">
+                <div className="mb-5 h-28 flex items-center">
                     <IconCard label="Mongo DB">
                         <Database className="text-gray-400 text-3xl transition-colors duration-700 group-hover:text-green-600" />
                     </IconCard>
@@ -156,7 +156,7 @@ const Services = () => {
                         <SiNextdotjs className="text-gray-400 text-3xl transition-colors duration-700 group-hover:text-black" />
                     </IconCard>
                 </div>
-                <div className="mb-5 h-28 border flex items-center">
+                <div className="mb-5 h-28 flex items-center">
                     <IconCard label="Laravel">
                         <SiLaravel className="text-gray-400 text-3xl transition-colors duration-700 group-hover:text-red-600" />
                     </IconCard>
@@ -173,7 +173,7 @@ const Services = () => {
                         <SiReact className="text-gray-400 text-3xl transition-colors duration-700 group-hover:text-blue-400" />
                     </IconCard>
                 </div>
-                <div className="mb-5 h-28 w-1/3 border flex items-center">
+                <div className="mb-5 h-28 w-1/3 flex items-center">
                     
                 </div>
 

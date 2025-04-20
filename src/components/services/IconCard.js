@@ -1,16 +1,16 @@
 const IconCard = ({ children, label }) => {
     return (
         <div
-            data-active="positive"
-            className="group w-25 h-25 p-2.5 relative bg-white border border-[#C3CCD8] rounded-lg transition-all duration-300 ease-in-out transform hover:scale-112 hover:shadow-lg hover:border-transparent hover:bg-white inline-flex flex-col justify-center items-center gap-2.5"
+            className="group w-25 h-25 p-2.5 relative bg-white border border-[#C3CCD8] rounded-lg transition-all duration-300 ease-in-out transform hover:scale-112 hover:shadow-lg hover:border-transparent hover:bg-white inline-flex flex-col justify-center items-center"
         >
-            <div className="self-stretch flex flex-col justify-center items-center gap-3">
-                <div className="w-8 h-8 relative overflow-hidden flex items-center justify-center transition-all duration-300">
-                    {/* Ensure the icon is sized and centered */}
+            <div className="relative w-full h-full flex items-center justify-center">
+                <div className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-300 group-hover:-translate-y-[1.75rem] flex items-center justify-center w-8 h-8">
                     {children}
                 </div>
-                <div className="text-center text-neutral-800 text-xs font-medium capitalize opacity-0 transition-all duration-300 group-hover:opacity-100">
-                    {label}
+                <div className="absolute top-1/3 transform -translate-y-1/2 mt-10 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    <span className="text-center text-neutral-800 text-xs font-medium capitalize">
+                        {label}
+                    </span>
                 </div>
             </div>
         </div>
