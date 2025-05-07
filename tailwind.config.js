@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-dark-blue': '#080827',
+      },
+    },
   },
   plugins: [],
 }

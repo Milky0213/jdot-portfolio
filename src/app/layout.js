@@ -10,14 +10,17 @@ const instrumentSans = Instrument_Sans({
   variable: '--font-instrument-sans',
 });
 
-export const metadata = {
-  title: "J Dot Development",
-  description: "Portfolio of Joshua Thomas-Butler",
-};
+// export const metadata = {
+//   title: "J Dot Development",
+//   description: "Portfolio of Joshua Thomas-Butler",
+// };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={instrumentSans.variable}>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="J Dot" />
+      </head>
       <body >
         <Navbar />
         {children}
