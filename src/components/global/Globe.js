@@ -23,7 +23,7 @@ const Globe = () => {
 
         // ✅ Better globe texture with visible outlines
         const globe = new ThreeGlobe()
-            .globeImageUrl('https://raw.githubusercontent.com/Milky0213/jdot-portfolio/refs/heads/main/public/images/global/earth-water.png')
+            .globeImageUrl('https://raw.githubusercontent.com/Milky0213/jdot-portfolio/refs/heads/main/public/images/global/earth-water-2.png')
             .arcsData([
                 { startLat: 25.2048, startLng: 55.2708, endLat: 51.5072, endLng: -0.1276 }, // UAE → UK
                 { startLat: 25.2048, startLng: 55.2708, endLat: -33.8688, endLng: 151.2093 }, // UAE → Australia
@@ -32,10 +32,11 @@ const Globe = () => {
             ])
             .arcColor(() => '#635AFF')  // Set the color of the arcs (points shooting out) to #635AFF
             .arcStroke(0.5)            // Set stroke width of arcs
-            .arcAltitude(0.3)          // Increase the altitude of the arcs for longer points
+            .arcAltitude(0.5)          // Increase the altitude of the arcs for longer points
             .arcDashLength(0.6)        // Adjust the length of the dash
             .arcDashGap(2)             // Adjust the gap between dashes
-            .arcDashAnimateTime(1000); // Animation time for the arc dashes
+            .arcDashAnimateTime(1000) // Animation time for the arc dashes
+            .showAtmosphere(false);
 
         scene.add(globe);
         camera.position.z = 300;
