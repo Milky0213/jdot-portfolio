@@ -10,8 +10,7 @@ const Global = () => {
       <div
         style={{
           width: '160%', // Wider to allow overflow
-          height: '100vh',
-          transform: 'translateX(28%)', // Shift left to only show 65%
+          transform: 'translateX(20%)', // Shift left to only show 65%
           pointerEvents: 'none', // So it doesn’t block clicks
         }}
       >
