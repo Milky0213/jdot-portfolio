@@ -21,42 +21,42 @@ const Globe = () => {
         scene.add(directionalLight);
 
         const arcsData = [
-            { startLat: 25.0897, startLng: 55.1551, endLat: 51.5072, endLng: -0.1276 },
-            { startLat: 25.0897, startLng: 55.1551, endLat: -27.4956, endLng: 153.0494 },
-            { startLat: -33.8995, startLng: 151.1835, endLat: -27.4956, endLng: 153.0494 },
-            { startLat: 25.0897, startLng: 55.1551, endLat: -7.1056, endLng: -34.8321 },
-            { startLat: -7.1056, startLng: -34.8321, endLat: 50.1122, endLng: 8.6839 },
-            { startLat: 25.0897, startLng: 55.1551, endLat: 30.3753, endLng: 69.3451 },
-            { startLat: 50.1122, startLng: 8.6839, endLat: -30.5595, endLng: 22.9375 },
-            { startLat: 50.1122, startLng: 8.6839, endLat: 37.0902, endLng: -95.7129 },
-            { startLat: 51.5072, startLng: -0.1276, endLat: 9.082, endLng: 8.6753 },
-            { startLat: 25.0897, startLng: 55.1551, endLat: 56.1304, endLng: -106.3468 },
-            { startLat: 50.1122, startLng: 8.6839, endLat: 56.2639, endLng: 9.5018 },
-            { startLat: 25.0897, startLng: 55.1551, endLat: 23.8859, endLng: 45.0792 },
-            { startLat: 50.1122, startLng: 8.6839, endLat: 40.0691, endLng: 45.0382 },
-            { startLat: 51.5072, startLng: -0.1276, endLat: 20.5937, endLng: 78.9629 },
-            { startLat: 25.0897, startLng: 55.1551, endLat: 39.3999, endLng: -8.2245 },
-            { startLat: 51.5072, startLng: -0.1276, endLat: -1.2921, endLng: 36.8219 },
+            { startLat: 25.0897, startLng: 55.1551, endLat: 51.5072, endLng: -0.1276 }, // UAE → UK
+            { startLat: 25.0897, startLng: 55.1551, endLat: -27.4956, endLng: 153.0494 }, // UAE → Australia (Brisbane)
+            { startLat: -33.8995, startLng: 151.1835, endLat: -27.4956, endLng: 153.0494 }, // Australia(Sydney) → Australia(Brisbane)
+            { startLat: 25.0897, startLng: 55.1551, endLat: -7.1056, endLng: -34.8321 }, // UAE → Brasil
+            { startLat: -7.1056, startLng: -34.8321, endLat: 50.1122, endLng: 8.6839 }, // Brasil → Germany (Frankfurt)
+            { startLat: 25.0897, startLng: 55.1551, endLat: 30.3753, endLng: 69.3451 }, // UAE → Pakistan
+            { startLat: 50.1122, startLng: 8.6839, endLat: -30.5595, endLng: 22.9375 }, // Germany (Frankfurt) → South Africa
+            { startLat: 50.1122, startLng: 8.6839, endLat: 37.0902, endLng: -95.7129 }, // Germany (Frankfurt) → United States
+            { startLat: 51.5072, startLng: -0.1276, endLat: 9.082, endLng: 8.6753 },     // UK → Nigeria
+            { startLat: 25.0897, startLng: 55.1551, endLat: 56.1304, endLng: -106.3468 },// UAE → Canada
+            { startLat: 50.1122, startLng: 8.6839, endLat: 56.2639, endLng: 9.5018 },  // Germany (Frankfurt) → Denmark
+            { startLat: 25.0897, startLng: 55.1551, endLat: 23.8859, endLng: 45.0792 },  // UAE → Saudi Arabia
+            { startLat: 50.1122, startLng: 8.6839, endLat: 40.0691, endLng: 45.0382 },  // Germany (Frankfurt) → Armenia
+            { startLat: 51.5072, startLng: -0.1276, endLat: 20.5937, endLng: 78.9629 },  // UK → India
+            { startLat: 25.0897, startLng: 55.1551, endLat: 39.3999, endLng: -8.2245 },  // UAE → Portugal
+            { startLat: 51.5072, startLng: -0.1276, endLat: -1.2921, endLng: 36.8219 }, // UK → Kenya
         ];
 
         const pointsData = [
-            { lat: 25.0897, lng: 55.1551 },
-            { lat: 51.5072, lng: -0.1276 },
-            { lat: -27.4956, lng: 153.0494 },
-            { lat: -33.8995, lng: 151.1835 },
-            { lat: -7.1056, lng: -34.8321 },
-            { lat: 30.3753, lng: 69.3451 },
-            { lat: -30.5595, lng: 22.9375 },
-            { lat: 37.0902, lng: -95.7129 },
-            { lat: 9.082, lng: 8.6753 },
-            { lat: 56.1304, lng: -106.3468 },
-            { lat: 56.2639, lng: 9.5018 },
-            { lat: 23.8859, lng: 45.0792 },
-            { lat: 40.0691, lng: 45.0382 },
-            { lat: 20.5937, lng: 78.9629 },
-            { lat: 39.3999, lng: -8.2245 },
-            { lat: -1.2921, lng: 36.8219 },
-            { lat: 55.3781, lng: -3.4360 },
+            { lat: 25.0897, lng: 55.1551 },  // UAE (Dubai)
+            { lat: 51.5072, lng: -0.1276 },  // UK
+            { lat: -27.4956, lng: 153.0494 },  // Australia (Brisbane)
+            { lat: -33.8995, lng: 151.1835 },  // Australia (Sydney)
+            { lat: -7.1056, lng: -34.8321 },  // Brasil
+            { lat: 30.3753, lng: 69.3451 },  // Pakistan
+            { lat: -30.5595, lng: 22.9375 }, // South Africa
+            { lat: 37.0902, lng: -95.7129 }, // United States of America
+            { lat: 9.082, lng: 8.6753 },     // Nigeria
+            { lat: 56.1304, lng: -106.3468 },// Canada
+            { lat: 56.2639, lng: 9.5018 },   // Denmark
+            { lat: 23.8859, lng: 45.0792 },  // Saudi Arabia
+            { lat: 40.0691, lng: 45.0382 },  // Armenia
+            { lat: 20.5937, lng: 78.9629 },  // India
+            { lat: 39.3999, lng: -8.2245 },  // Portugal
+            { lat: -1.2921, lng: 36.8219 }, // Kenya
+            { lat: 55.3781, lng: -3.4360 }, // United Kingdom
         ];
 
         const globe = new ThreeGlobe()
@@ -103,7 +103,7 @@ const Globe = () => {
     }, []);
 
     return (
-        <div ref={globeRef} style={{ width: '100%', height: '100vh' }} />
+        <div ref={globeRef} style={{ width: '100%', height: '140vh' }} />
     );
 };
 

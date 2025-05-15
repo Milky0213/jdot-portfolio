@@ -7,7 +7,16 @@ const Globe = dynamic(() => import('../global/Globe'), { ssr: false });
 const Global = () => {
   return (
     <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center" style={{ backgroundColor: '#232323' }}>
-      <Globe />
+      <div
+        style={{
+          width: '160%', // Wider to allow overflow
+          height: '100vh',
+          transform: 'translateX(28%)', // Shift left to only show 65%
+          pointerEvents: 'none', // So it doesn’t block clicks
+        }}
+      >
+        <Globe />
+      </div>
     </section>
   );
 };
