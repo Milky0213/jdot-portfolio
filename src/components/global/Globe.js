@@ -60,7 +60,7 @@ const Globe = () => {
         ];
 
         const globe = new ThreeGlobe()
-            .globeImageUrl('https://raw.githubusercontent.com/Milky0213/jdot-portfolio/refs/heads/main/public/images/global/earth-water-2')
+            .globeImageUrl('https://raw.githubusercontent.com/Milky0213/jdot-portfolio/refs/heads/main/public/images/global/earth-water-2.png')
             .arcsData([]) // Start with no arcs
             .arcColor(() => '#635AFF')
             .arcStroke(0.6)
