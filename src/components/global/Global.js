@@ -9,9 +9,10 @@ const Global = () => {
     <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center" style={{ backgroundColor: '#232323' }}>
       <div
         style={{
-          width: '160%', // Wider to allow overflow
-          transform: 'translateX(20%)', // Shift left to only show 65%
-          pointerEvents: 'none', // So it doesn’t block clicks
+          width: '200%', // Set a width that allows for a larger globe
+          position: 'absolute', // Keep it absolutely positioned
+          left: '-5%', // Adjust right to move it further to the right
+          overflow: 'hidden', // Hide any overflow
         }}
       >
         <Globe />
