@@ -1,0 +1,106 @@
+.embla {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  /* Spacing from arrows */
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  gap: 2rem;
+  /* spacing between slides */
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  /* show 1 card at a time */
+  display: flex;
+  justify-content: center;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.embla__prev,
+.embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+}
+
+.embla__prev {
+  left: 10px;
+}
+
+.embla__next {
+  right: 10px;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.embla__progress-wrapper {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 1150px;
+  height: 4px;
+  /* or 1rem */
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.embla__progress-wrapper.hidden {
+  display: none;
+}
+
+.embla__progress-bar {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  transform-origin: left;
+  transform: scaleX(0);
+  /* animation applied via inline style in JS */
+}
+
+.embla__progress-bar.hidden {
+  display: none;
+}
+
+@keyframes progressAnim {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}

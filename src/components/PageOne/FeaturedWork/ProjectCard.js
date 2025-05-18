@@ -1,0 +1,64 @@
+import React from "react";
+import Image from "next/image";
+// Icons
+import { FaArrowRight } from "react-icons/fa";
+
+const ProjectCard = ({ project }) => {
+    const { imageSource, service, serviceLevel, apis, title } = project;
+
+    return (
+        <a
+            href="#"
+            className="block mb-10 rounded-xl overflow-hidden group cursor-pointer"
+            style={{ width: "1150px" }} 
+        >
+            <div className="relative w-full h-150 rounded-lg overflow-hidden">
+                <Image
+                    src={imageSource}
+                    alt="Project"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                    priority
+                />
+
+                {/* White glow from bottom */}
+                <div
+                    className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#232323] to-transparent 
+          opacity-96 transition-all duration-300 group-hover:h-24 pointer-events-none rounded-b-lg"
+                ></div>
+
+                {/* Title aligned bottom left on top of glow */}
+                <h3
+                    className="absolute bottom-6 left-4 text-xl font-semibold z-10 pointer-events-none group-hover:bottom-10 transition-all duration-300"
+                >
+                    {title}
+                </h3>
+                <div className="absolute bottom-5 left-4  z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-row">
+                <p
+                    className="text-sm font-semibold"
+                >
+                    Read More
+                </p>
+                    <FaArrowRight className="-mt-[-2px] ml-1"/>
+                </div>
+            </div>
+
+            {/* Details section */}
+            <div className="mt-10 space-y-2 text-sm font-medium flex flex-row">
+                <div>
+                    <span className="font-semibold">Service:</span> {service}
+                </div>
+                <div>
+                    <span className="font-semibold ml-10">Service Level:</span> {serviceLevel}
+                    
+                </div>
+                <div>
+                    <span className="font-semibold ml-10">API's:</span> {apis}
+                </div>
+            </div>
+        </a>
+    );
+};
+
+export default ProjectCard;

@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 // Components
 import IconCard from './IconCard';
 import EmptyIconCard from './EmptyIconCard';
-import Button from '../ui/Button';
-import LineConnector from "../services/LineConnector"
+import Button from '../../ui/Button';
+import LineConnector from "./LineConnector"
 // Icons
 import { SiRender, SiTailwindcss, SiExpress, SiTwilio, SiNextdotjs, SiLaravel, SiJavascript, SiReact } from "react-icons/si";
 import { FaApple, FaAndroid } from "react-icons/fa";
@@ -73,8 +73,7 @@ const Services = () => {
     const isActive = (name) => !!current.activeIcons[name];
 
     return (
-        <div className="bg-[#F7F9FC]">
-            <section className="w-full min-h-screen bg-stone-100 text-gray-900 py-10 px-10">
+            <section className="w-full min-h-screen bg-[#F5F1E8] text-gray-900 py-10 px-10">
                 {/* Row 1 */}
                 <div className="h-28 flex items-center justify-between">
                     <div className="w-full ml-75">
@@ -232,7 +231,6 @@ const Services = () => {
                 </div>
 
             </section>
-        </div>
     );
 };
 

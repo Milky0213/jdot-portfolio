@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import ThreeGlobe from 'three-globe';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import countries from "../../../public/geo/customLow.geo"
+import countries from "../../../../public/geo/customMed.geo"
 
 const Globe = () => {
     const globeRef = useRef();
@@ -34,12 +34,13 @@ const Globe = () => {
 
         const arcsData = [
             { startLat: 25.0897, startLng: 55.1551, endLat: 51.5072, endLng: -0.1276 }, // UAE → UK
-            { startLat: 25.0897, startLng: 55.1551, endLat: -27.4956, endLng: 153.0494 }, // UAE → Australia (Brisbane)
             { startLat: -27.4956, startLng: 153.0494, endLat: -33.8995, endLng: 151.1835 }, // Australia(Sydney) → Australia(Brisbane)
             { startLat: 25.0897, startLng: 55.1551, endLat: -7.1056, endLng: -34.8321 }, // UAE → Brasil
             { startLat: -7.1056, startLng: -34.8321, endLat: 50.1122, endLng: 8.6839 }, // Brasil → Germany (Frankfurt)
             { startLat: 25.0897, startLng: 55.1551, endLat: 30.3753, endLng: 69.3451 }, // UAE → Pakistan
             { startLat: 50.1122, startLng: 8.6839, endLat: -30.5595, endLng: 22.9375 }, // Germany (Frankfurt) → South Africa
+            { startLat: 25.0897, startLng: 55.1551, endLat: -27.4956, endLng: 153.0494 }, // UAE → Australia (Brisbane)
+            { startLat: -27.4956, startLng: 153.0494, endLat: 4.5867, endLng: 102.1243 }, // Australia (Brisbane) → Indonesia
             { startLat: 50.1122, startLng: 8.6839, endLat: 37.0902, endLng: -95.7129 }, // Germany (Frankfurt) → United States
             { startLat: 51.5072, startLng: -0.1276, endLat: 9.082, endLng: 8.6753 },     // UK → Nigeria
             { startLat: 25.0897, startLng: 55.1551, endLat: 56.1304, endLng: -106.3468 },// UAE → Canada
@@ -70,6 +71,7 @@ const Globe = () => {
             { lat: -1.2921, lng: 36.8219 }, // Kenya
             { lat: 55.3781, lng: -3.4360 }, // United Kingdom
             { lat: 50.1122, lng: 8.6839 }, // Germany (Frankfurt)
+            { lat: 4.5867, lng: 102.1243 }, // Indonesia
         ];
 
         const globe = new ThreeGlobe()

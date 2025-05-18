@@ -1,6 +1,6 @@
 import React from "react";
-import { HeroSectionGradient } from '@/components/hero';
-import Button from "../ui/Button";
+import { HeroSectionGradient } from '@/components/PageOne/Hero';
+import Button from "../../ui/Button";
 
 const HeroSection = () => {
   return (

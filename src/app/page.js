@@ -1,8 +1,10 @@
 import React from 'react';
-// Components
-import HeroSection from '@/components/hero/HeroSection';
-import Services from '@/components/services/Services'
-import Global from '@/components/global/Global';
+// Page 1 Components
+import HeroSection from '@/components/PageOne/Hero/HeroSection';
+import Services from '@/components/PageOne/Services/Services'
+import Global from '@/components/PageOne/Global/Global';
+import FeaturedWork from '@/components/PageOne/FeaturedWork/FeaturedWork';
+import WhyUs from '@/components/PageOne/WhyUs/WhyUs';
 
 
 
@@ -14,6 +16,10 @@ const Landing = () => {
       <Services />
 
       <Global />
+
+      <FeaturedWork />
+
+      <WhyUs />
     </div>
   );
 };
