@@ -8,7 +8,7 @@ const Global = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#232323] flex items-center justify-between px-16">
       {/* Left Text Section */}
-      <div className="z-10 text-white max-w-xl text-center ml-25">
+      <div className="z-10 text-[#F5F1E8] max-w-xl text-center ml-25">
         <h2 className="text-3xl mb-3">GLOBAL SCALE</h2>
         <h1 className="text-6xl mb-6">Lorem ipsum</h1>
         <p className="text-base mb-10 leading-relaxed">

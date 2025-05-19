@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
             className="block mb-10 rounded-xl overflow-hidden group cursor-pointer"
             style={{ width: "1150px" }} 
         >
-            <div className="relative w-full h-150 rounded-lg overflow-hidden">
+            <div className="relative w-full h-150 text-[#F5F1E8] rounded-lg overflow-hidden">
                 <Image
                     src={imageSource}
                     alt="Project"
@@ -30,11 +30,11 @@ const ProjectCard = ({ project }) => {
 
                 {/* Title aligned bottom left on top of glow */}
                 <h3
-                    className="absolute bottom-6 left-4 text-xl font-semibold z-10 pointer-events-none group-hover:bottom-10 transition-all duration-300"
+                    className="absolute bottom-7 left-4 text-xl font-semibold z-10 pointer-events-none group-hover:bottom-12 transition-all duration-300"
                 >
                     {title}
                 </h3>
-                <div className="absolute bottom-5 left-4  z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-row">
+                <div className="absolute bottom-5 left-4 z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-row">
                 <p
                     className="text-sm font-semibold"
                 >
@@ -45,7 +45,7 @@ const ProjectCard = ({ project }) => {
             </div>
 
             {/* Details section */}
-            <div className="mt-10 space-y-2 text-sm font-medium flex flex-row">
+            <div className="mt-10 space-y-2 text-sm text-[#F5F1E8] font-medium flex flex-row">
                 <div>
                     <span className="font-semibold">Service:</span> {service}
                 </div>

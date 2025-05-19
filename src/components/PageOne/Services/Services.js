@@ -22,7 +22,7 @@ const contentOptions = [
     {
         title: "Software Development",
         description: "Lorem ipsum dolor sit amet consectetur. Purus sagittis eget ut iaculis.",
-        image: "/images/services/TempCI.png",
+        image: "/images/pageOne/services/TempCI.png",
         imageHeight: "h-100 w-110",
         activeIcons: {
             laravel: true,
@@ -35,7 +35,7 @@ const contentOptions = [
     {
         title: "App Development",
         description: "Lorem ipsum dolor sit amet consectetur. Purus sagittis eget ut iaculis.",
-        image: "/images/services/AppDevCI.png",
+        image: "/images/pageOne/services/AppDevCI.png",
         imageHeight: "h-120",
         activeIcons: {
             mongoDB: true,
@@ -49,7 +49,7 @@ const contentOptions = [
     {
         title: "Web Development",
         description: "Lorem ipsum dolor sit amet consectetur. Purus sagittis eget ut iaculis.",
-        image: "/images/services/WebDevCI.png",
+        image: "/images/pageOne/services/WebDevCI.png",
         imageHeight: "h-100",
         activeIcons: {
             javaScript: true,
@@ -141,13 +141,13 @@ const Services = () => {
                         </IconCard>
                     </div>
                     <div className="ml-35">
-                        <h2 className="text-[32px] font-normal text-left">OUR SERVICES</h2>
+                        <h2 className="text-[32px] font-normal text-left text-[#232323]">OUR SERVICES</h2>
                         <AnimatePresence mode="wait">
                             <motion.div
                                 transition={{ duration: 0.2, ease: "easeInOut" }}
                             >
-                                <h1 className="text-[64px] font-medium text-left">{current.title}</h1>
-                                <p className="text-[16px] font-normal text-left max-w-md">{current.description}</p>
+                                <h1 className="text-[64px] font-medium text-left text-[#232323]">{current.title}</h1>
+                                <p className="text-[16px] font-normal text-left max-w-md text-[#232323]">{current.description}</p>
                             </motion.div>
                         </AnimatePresence>
                     </div>
@@ -208,7 +208,7 @@ const Services = () => {
 
                     {/* Center Button */}
                     <div className="flex-1 flex justify-center self-start mt-1.5 w-full ">
-                        <Button title="Get Started" onPress={handleSwitch} />
+                    <Button title="Get Started" onPress={handleSwitch} textColor='text-[#232323]'/>
                     </div>
 
                     {/* Right Section */}

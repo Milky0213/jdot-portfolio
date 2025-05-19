@@ -10,9 +10,9 @@ const Navbar = () => {
         </a>
       </div>
       <div className="flex space-x-6 gap-20">
-        <a href="#about" className="justify-start text-stone-100 text-l font-medium hover:text-gray-300 hover:opacity-80 transition-all duration-300">About Us</a>
-        <a href="#services" className="justify-start text-stone-100 text-l font-medium hover:text-gray-300 hover:opacity-80 transition-all duration-300">Services</a>
-        <a href="#contact" className="justify-start text-stone-100 text-l font-medium hover:text-gray-300 hover:opacity-80 transition-all duration-300">Contact</a>
+        <a href="#about" className="justify-start text-[#F5F1E8] text-l font-medium hover:text-gray-300 hover:opacity-80 transition-all duration-300">About Us</a>
+        <a href="#services" className="justify-start text-[#F5F1E8] text-l font-medium hover:text-gray-300 hover:opacity-80 transition-all duration-300">Services</a>
+        <a href="#contact" className="justify-start text-[#F5F1E8] text-l font-medium hover:text-gray-300 hover:opacity-80 transition-all duration-300">Contact</a>
 
       </div>
     </nav>

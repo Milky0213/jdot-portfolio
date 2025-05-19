@@ -10,17 +10,17 @@ const HeroSection = () => {
       <HeroSectionGradient />
 
       {/* Content */}
-      <div className="relative text-center px-8">
-        <h1 className="text-stone-100 text-6xl font-bold uppercase mb-4">
+      <div className="relative text-center text-[#F5F1E8] px-8">
+        <h1 className="text-6xl font-bold uppercase mb-4">
           Cutting-Edge Software
         </h1>
-        <h1 className="text-stone-100 text-6xl font-bold uppercase mb-4">
+        <h1 className="text-6xl font-bold uppercase mb-4">
           <span className="italic font-normal">Solutions</span> That Help
         </h1>
-        <h1 className="text-stone-100 text-6xl font-bold uppercase mb-30">
+        <h1 className="text-6xl font-bold uppercase mb-30">
           Your Business <span className="italic font-normal">Grow</span>
         </h1>
-        <Button title="Get Started" textColor="text-white" />
+        <Button title="Get Started" textColor="text-[#F5F1E8]" />
       </div>
     </section>
   );

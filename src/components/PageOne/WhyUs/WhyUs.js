@@ -4,7 +4,7 @@ import ReasonCard from "./ReasonCard";
 
 const WhyUs = () => {
     return (
-        <section className="relative min-h-screen overflow-hidden bg-[#F5F1E8] px-16 py-20 text-[#101828]">
+        <section className="relative min-h-screen text-[#232323] overflow-hidden bg-[#F5F1E8] px-16 py-20 text-[#101828]">
             {/* Header */}
             <div className=" justify-between items-start mb-16">
                 <h2 className="text-3xl font-normal mb-3 leading-none">WHY CHOOSE</h2>
