@@ -6,6 +6,7 @@ import Global from '@/components/PageOne/Global/Global';
 import FeaturedWork from '@/components/PageOne/FeaturedWork/FeaturedWork';
 import WhyUs from '@/components/PageOne/WhyUs/WhyUs';
 import Testimonials from '@/components/PageOne/Testimonials/Testimonials';
+import FAQ from '@/components/PageOne/FAQ/FAQ';
 
 
 
@@ -23,6 +24,8 @@ const Landing = () => {
       <WhyUs />
 
       <Testimonials />
+
+      <FAQ />
     </div>
   );
 };

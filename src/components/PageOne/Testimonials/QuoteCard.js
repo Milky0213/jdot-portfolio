@@ -5,7 +5,7 @@ const QuoteCard = ({ quote, author, role, logo }) => (
                   w-full max-w-lg min-w-[27rem] min-h-[17rem]
                   rounded-xl bg-[#232323] px-8 py-10 shadow-lg">
 
-        <span className="absolute -top-5 right-6 text-7xl font-bold text-indigo-500 leading-none select-none">”</span>
+        <span className="absolute -top-5 right-6 text-7xl font-bold text-[#625AFF] leading-none select-none">”</span>
 
         {/* quote */}
         <p className="text-lg font-medium leading-relaxed">

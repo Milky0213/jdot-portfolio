@@ -208,7 +208,7 @@ const Services = () => {
 
                     {/* Center Button */}
                     <div className="flex-1 flex justify-center self-start mt-1.5 w-full ">
-                    <Button title="Get Started" onPress={handleSwitch} textColor='text-[#232323]'/>
+                    <Button title="Get Started" onPress={handleSwitch} mode="light"/>
                     </div>
 
                     {/* Right Section */}
