@@ -1,15 +1,13 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 // Components
 import IconCard from './IconCard';
-import EmptyIconCard from './EmptyIconCard';
 import Button from '../../ui/Button';
-import LineConnector from "./LineConnector"
+// Data
+import { contentOptions } from './Data/contentOptions';
 // Icons
 import { SiRender, SiTailwindcss, SiExpress, SiTwilio, SiNextdotjs, SiLaravel, SiJavascript, SiReact } from "react-icons/si";
-import { FaApple, FaAndroid } from "react-icons/fa";
-import { AiFillQuestionCircle } from "react-icons/ai";
 import { IoLogoGithub } from "react-icons/io";
 import { DiMysql } from "react-icons/di";
 import CustomIcon from './CustomIcon';
@@ -18,53 +16,17 @@ import { MongoDBIcon } from './MongoDBIcon';
 import { FigmaIcon } from './FigmaIcon';
 import { PostmanIcon } from './PostmanIcon';
 
-const contentOptions = [
-    {
-        title: "Software Development",
-        description: "Lorem ipsum dolor sit amet consectetur. Purus sagittis eget ut iaculis.",
-        image: "/images/pageOne/services/TempCI.png",
-        imageHeight: "h-100 w-110",
-        activeIcons: {
-            laravel: true,
-            mySQL: true,
-            aws: true,
-            github: true,
-            render: true
-        },
-    },
-    {
-        title: "App Development",
-        description: "Lorem ipsum dolor sit amet consectetur. Purus sagittis eget ut iaculis.",
-        image: "/images/pageOne/services/AppDevCI.png",
-        imageHeight: "h-120",
-        activeIcons: {
-            mongoDB: true,
-            expo: true,
-            react: true,
-            express: true,
-            github: true,
-            postman: true
-        },
-    },
-    {
-        title: "Web Development",
-        description: "Lorem ipsum dolor sit amet consectetur. Purus sagittis eget ut iaculis.",
-        image: "/images/pageOne/services/WebDevCI.png",
-        imageHeight: "h-100",
-        activeIcons: {
-            javaScript: true,
-            nextJS: true,
-            twilio: true,
-            github: true,
-            tailwind: true,
-            figma: true
-        },
-    },
-];
-
 const Services = () => {
     const [currentSet, setCurrentSet] = useState(0);
     const current = contentOptions[currentSet];
+
+    const handleScroll = (event) => {
+        const { scrollTop, clientHeight, scrollHeight } = event.target;
+        // Check if user has scrolled to near the bottom
+        if (scrollTop + clientHeight >= scrollHeight - 50) {
+            setCurrentSet((prev) => (prev + 1) % contentOptions.length);
+        }
+    };
 
     const handleSwitch = () => {
         setCurrentSet((prev) => (prev + 1) % contentOptions.length);
@@ -73,7 +35,8 @@ const Services = () => {
     const isActive = (name) => !!current.activeIcons[name];
 
     return (
-            <section className="w-full min-h-screen bg-[#F5F1E8] text-gray-900 py-10 px-10">
+        <div className="h-screen overflow-y-scroll" onScroll={handleScroll}>
+            <section className="w-full h-screen bg-[#F5F1E8] text-gray-900 py-10 px-10">
                 {/* Row 1 */}
                 <div className="h-28 flex items-center justify-between">
                     <div className="w-full ml-75">
@@ -144,6 +107,7 @@ const Services = () => {
                         <h2 className="text-[32px] font-normal text-left text-[#232323]">OUR SERVICES</h2>
                         <AnimatePresence mode="wait">
                             <motion.div
+                            key={currentSet}
                                 transition={{ duration: 0.2, ease: "easeInOut" }}
                             >
                                 <h1 className="text-[64px] font-medium text-left text-[#232323]">{current.title}</h1>
@@ -208,7 +172,7 @@ const Services = () => {
 
                     {/* Center Button */}
                     <div className="flex-1 flex justify-center self-start mt-1.5 w-full ">
-                    <Button title="Get Started" onPress={handleSwitch} mode="light"/>
+                        <Button title="Get Started" mode="light" onPress={handleSwitch}/>
                     </div>
 
                     {/* Right Section */}
@@ -231,6 +195,7 @@ const Services = () => {
                 </div>
 
             </section>
+        </div>
     );
 };
 

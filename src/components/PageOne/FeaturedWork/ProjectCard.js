@@ -16,8 +16,8 @@ const ProjectCard = ({ project }) => {
                 <Image
                     src={imageSource}
                     alt="Project"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-lg"
                     priority
                 />
