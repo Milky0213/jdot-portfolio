@@ -24,7 +24,7 @@ const FAQ = () => {
                                 or speak to an agent
                             </p>
                         </a>
-                        <span className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 transition-transform duration-500 opacity-0 group-hover:translate-x-[-40px] group-hover:opacity-100 text-3xl">
+                        <span className="absolute left-[-47px] top-1/2 transform -translate-y-1/2 transition-transform duration-500 opacity-0 group-hover:translate-x-[-25px] group-hover:opacity-100 text-3xl">
                             <GoArrowUpRight size={50} />
                         </span>
                     </div>

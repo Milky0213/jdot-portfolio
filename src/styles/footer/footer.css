@@ -1,0 +1,38 @@
+.footer-container {
+        background-color: #000;
+        /* fallback */
+        position: relative;
+        overflow: hidden;
+}
+
+.footer-container::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at 30% 30%,
+                        #4419e1,
+                        #1d0d45,
+                        #5752C4,
+                        #00010a,
+                        transparent);
+        animation: rotate 30s linear infinite;
+        filter: blur(300px);
+        z-index: 0;
+}
+
+@keyframes rotate {
+        0% {
+                transform: rotate(0deg) scale(1.1);
+        }
+
+        50% {
+                transform: rotate(180deg) scale(1.05);
+        }
+
+        100% {
+                transform: rotate(360deg) scale(1.1);
+        }
+}
