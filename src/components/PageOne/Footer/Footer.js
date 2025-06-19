@@ -1,18 +1,79 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 // Components
-import { HeroSectionGradient } from '@/components/PageOne/Hero';
+import { HeroSectionGradient } from "@/components/PageOne/Hero";
 // Icons
 import { ArrowUp } from "lucide-react";
 
 const Footer = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+    const addressRef = useRef([]);
+    const socialRef = useRef([]);
+    const emailRef = useRef([]);
+
+    // ✅ Clear refs *just before JSX* so they're fresh for rendering
+    addressRef.current.length = 0;
+    socialRef.current.length = 0;
+    emailRef.current.length = 0;
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Address animation
+        ScrollTrigger.batch(addressRef.current, {
+            trigger: ".footerTriggerClass",
+            start: "bottom bottom",
+            once: true,
+            onEnter: (batch) => {
+                gsap.from(batch, {
+                    opacity: 0,
+                    y: -30,
+                    stagger: 0.15,
+                    duration: 0.6,
+                });
+            },
+        });
+
+        // Social animation
+        ScrollTrigger.batch(socialRef.current, {
+            trigger: ".footerTriggerClass",
+            start: "bottom bottom",
+            once: true,
+            onEnter: (batch) => {
+                gsap.from(batch, {
+                    opacity: 0,
+                    y: -30,
+                    stagger: 0.15,
+                    duration: 0.6,
+                });
+            },
+        });
+
+        // Email animation
+        ScrollTrigger.batch(emailRef.current, {
+            trigger: ".footerTriggerClass",
+            start: "bottom bottom",
+            once: true,
+            onEnter: (batch) => {
+                gsap.from(batch, {
+                    opacity: 0,
+                    y: -30,
+                    stagger: 0.15,
+                    duration: 0.6,
+                });
+            },
+        });
+    }, []);
+
     return (
-        <footer className="relative min-h-screen text-[#F5F1E8] py-16 px-8 md:px-20 flex flex-col">
-            {/* Gradient Background */}
+        <footer className="relative min-h-screen text-[#F5F1E8] py-16 px-8 md:px-20 flex flex-col footerTriggerClass">
             <HeroSectionGradient />
 
             {/* Top row */}
@@ -38,34 +99,36 @@ const Footer = () => {
 
             {/* Middle content */}
             <div className="relative z-10 flex flex-col md:flex-row text-2xl font-normal justify-between gap-8 md:gap-16 mt-45 w-[60%]">
+                {/* Address */}
                 <div className="space-y-2">
-                    <p>Suite 1308</p>
-                    <p>9 Thomas Blv.</p>
-                    <p>Business District, Dubai</p>
-                    <p>United Arabic Emirates</p>
+                    {["16th Floor", "Burlington Tower", "Business Bay, Dubai", "United Arabic Emirates"].map(
+                        (line, index) => (
+                            <p key={index} ref={(el) => (addressRef.current[index] = el)}>
+                                {line}
+                            </p>
+                        )
+                    )}
                 </div>
 
+                {/* Social Links */}
                 <div className="space-y-2">
-                    <p>
-                        <Link href="https://youtube.com" target="_blank" className="hover:underline transition">
-                            Twitter / X
-                        </Link>
-                    </p>
-                    <p>
-                        <Link href="https://youtube.com" target="_blank" className="hover:underline transition">
-                            Instagram
-                        </Link>
-                    </p>
-                    <p>
-                        <Link href="https://youtube.com" target="_blank" className="hover:underline transition">
-                            LinkedIn
-                        </Link>
-                    </p>
+                    {[
+                        { label: "Twitter / X", url: "https://youtube.com" },
+                        { label: "Instagram", url: "https://youtube.com" },
+                        { label: "LinkedIn", url: "https://youtube.com" },
+                    ].map((item, index) => (
+                        <p key={index} ref={(el) => (socialRef.current[index] = el)}>
+                            <Link href={item.url} target="_blank" className="hover:underline transition">
+                                {item.label}
+                            </Link>
+                        </p>
+                    ))}
                 </div>
 
+                {/* Inquiries */}
                 <div className="space-y-2">
-                    <p>General enquiries</p>
-                    <p>
+                    <p ref={(el) => (emailRef.current[0] = el)}>General enquiries</p>
+                    <p ref={(el) => (emailRef.current[1] = el)}>
                         <Link href="mailto:hello@jdot.com" className="hover:underline transition">
                             hello@jdot.com
                         </Link>

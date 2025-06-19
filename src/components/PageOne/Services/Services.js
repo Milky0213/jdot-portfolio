@@ -107,7 +107,7 @@ const Services = () => {
                         <h2 className="text-[32px] font-normal text-left text-[#232323]">OUR SERVICES</h2>
                         <AnimatePresence mode="wait">
                             <motion.div
-                            key={currentSet}
+                                key={currentSet}
                                 transition={{ duration: 0.2, ease: "easeInOut" }}
                             >
                                 <h1 className="text-[64px] font-medium text-left text-[#232323]">{current.title}</h1>
@@ -172,7 +172,7 @@ const Services = () => {
 
                     {/* Center Button */}
                     <div className="flex-1 flex justify-center self-start mt-1.5 w-full ">
-                        <Button title="Get Started" mode="light" onPress={handleSwitch}/>
+                        <Button title="Get Started" mode="light" onPress={handleSwitch} />
                     </div>
 
                     {/* Right Section */}

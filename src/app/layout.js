@@ -30,7 +30,6 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="J Dot" />
       </head>
       <body>
-        {/* Removed smooth-wrapper divs */}
         <Navbar />
         {children}
       </body>

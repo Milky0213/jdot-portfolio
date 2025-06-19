@@ -13,12 +13,12 @@
 
 .embla__container {
   display: flex;
-  gap: 2rem;
   /* spacing between slides */
 }
 
 .embla__slide {
   flex: 0 0 100%;
+  max-width: 100%;
   /* show 1 card at a time */
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@
 
 .project-card {
   width: 100%;
-  max-width: 600px;
+  max-width: 1300px;
   background-color:#F5F1E8;
   padding: 40px;
   border-radius: 10px;

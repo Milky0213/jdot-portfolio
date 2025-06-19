@@ -61,12 +61,11 @@ const Global = () => {
   return (
     <section ref={statsSectionRef} className="relative min-h-screen overflow-hidden bg-[#232323] flex items-center justify-between px-16">
       {/* Left Text Section */}
-      <div className="z-10 text-[#F5F1E8] max-w-xl text-center ml-25">
+      <div className="z-10 text-[#F5F1E8] max-w-xl text-center ml-45">
         <h2 className="text-3xl mb-3">GLOBAL SCALE</h2>
         <h1 className="text-6xl mb-6">Lorem ipsum</h1>
         <p className="text-base mb-10 leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur. Morbi placerat massa neque donec tempor.
-          Dolor morbi rhoncus sit in quis dui accumsan luctus risus. Mi sed nulla ultrices at.
+          Software development without limits. J Dot Development delivers exceptional solutions by expert developers, regardless of the size, industry, or location of your business.
         </p>
 
         {/* Stats Row */}
@@ -90,7 +89,7 @@ const Global = () => {
         style={{
           width: '200%',
           position: 'absolute',
-          left: '-10',
+          left: '0',
           overflow: 'hidden',
           zIndex: 0,
         }}

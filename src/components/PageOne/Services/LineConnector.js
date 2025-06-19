@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../styles/services/lineConnector.css';
+import '../../../styles/pageOne/services/lineConnector.css';
 
 const SVGLine = () => {
     return (

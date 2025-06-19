@@ -31,7 +31,7 @@ const Testimonials = () => {
                     TESTIMONIALS
                 </h2>
                 <p className="text-base leading-relaxed text-[#232323]">
-                    Lorem ipsum dolor sit amet consectetur. Eget fringilla neque eget bibendum pharetra pretium. Dignissim consequat.
+                    What our clients have to say about working with us.
                 </p>
             </div>
 

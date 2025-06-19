@@ -7,17 +7,18 @@ const ProjectCard = ({ project }) => {
     const { imageSource, service, serviceLevel, apis, title } = project;
 
     return (
+        <div className="overflow-hidden group">
         <a
             href="#"
-            className="block mb-10 rounded-xl overflow-hidden group cursor-pointer"
-            style={{ width: "1150px" }} 
+            className="block mb-10 rounded-lg overflow-hidden group cursor-pointer"
         >
-            <div className="relative w-full h-150 text-[#F5F1E8] rounded-lg overflow-hidden">
+            <div className="relative w-full h-200 text-[#F5F1E8] rounded-lg overflow-hidden">
                 <Image
                     src={imageSource}
                     alt="Project"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width="1200"
+                    height="800"
+                    style={{ objectFit: 'contain' }}
                     className="rounded-lg"
                     priority
                 />
@@ -43,6 +44,7 @@ const ProjectCard = ({ project }) => {
                     <FaArrowRight className="-mt-[-2px] ml-1"/>
                 </div>
             </div>
+        </a>
 
             {/* Details section */}
             <div className="mt-10 space-y-2 text-sm text-[#F5F1E8] font-medium flex flex-row">
@@ -57,7 +59,7 @@ const ProjectCard = ({ project }) => {
                     <span className="font-semibold ml-10">API's:</span> {apis}
                 </div>
             </div>
-        </a>
+            </div>
     );
 };
 

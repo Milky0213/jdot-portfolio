@@ -4,7 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 // Components
 import ProjectCard from "../ProjectCard";
 // Styling
-import '../../../../styles/featuredWork/emblaCarousel.css';
+import '../../../../styles/pageOne/featuredWork/emblaCarousel.css';
 // Icons
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -120,12 +120,12 @@ const EmblaCarousel = ({ projects }) => {
             </div>
 
             {/* Progress bar - Adding conditional hidden class */}
-            <div className={`embla__progress-wrapper absolute bottom-0 left-0 w-full h-1 bg-gray-700 overflow-hidden ${hideProgressWrapper ? 'hidden' : ''}`}>
+            {/* <div className={`embla__progress-wrapper absolute bottom-0 left-0 w-full h-1 bg-gray-700 overflow-hidden ${hideProgressWrapper ? 'hidden' : ''}`}>
                 <div
                     ref={progressNode}
                     className={`embla__progress-bar h-full bg-white transition-all duration-300 ${showAutoplayProgress ? "animate-progress" : ""}`}
                 ></div>
-            </div>
+            </div> */}
 
             <button className="embla__prev" onClick={scrollPrev} aria-label="Previous slide">
                 <FaArrowLeft />

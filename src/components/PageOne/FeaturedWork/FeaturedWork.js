@@ -79,10 +79,11 @@ const FeaturedWork = () => {
                 <h2 ref={headingRef} className="text-6xl font-normal">
                     FEATURED WORK
                 </h2>
-                <p ref={paragraphRef} className="max-w-lg text-base font-normal leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur. Morbi placerat massa neque
-                    donec tempor. Dolor morbi rhoncus sit in quis dui accumsan luctus
-                    risus. Mi sed nulla ultrices at.
+                <p ref={paragraphRef} className="max-w-xl text-base font-normal leading-relaxed">
+                    We’re committed to creating software solutions that drive real results. 
+                    Working with clients from across the globe, we know the importance of 
+                    understanding your unique needs and deliver bespoke software that transforms 
+                    your vision into reality.
                 </p>
             </div>
 
